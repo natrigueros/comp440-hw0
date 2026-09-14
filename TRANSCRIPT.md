@@ -8909,7 +8909,7 @@ MovieLens 100K.
 <!-- transcript-session: e9502caf-182e-4664-bf01-e1c0bdb442ad | 2026-09-14T19:00:43.343Z -->
 ## Session `e9502caf` — 2026-09-14 19:00:43
 
-*2 user turns. Tool outputs and reasoning omitted.*
+*3 user turns. Tool outputs and reasoning omitted.*
 
 **User:**
 <ide_opened_file>The user opened the file /Users/naylatrigueros/Documents/COMP 127/comp440-hw0/human_part1.py in the IDE. This may or may not be related to the current task.</ide_opened_file>
@@ -8929,5 +8929,26 @@ how do i get the numbers to put in the writeup if i cant run the individual part
 
 **Claude:**
 - 🔧 `Read` — /Users/naylatrigueros/Documents/COMP 127/comp440-hw0/run_all.py
+Each part file runs on its own — the docstring says so:
+
+```
+uv run python human_part1.py
+```
+
+Same pattern for `human_part2.py` and `human_part3.py`. Running one of these executes just that file's code and prints its own output. You read the numbers off your terminal and type them into `WRITEUP.md` yourself.
+
+Nothing stops you from running your own scripts as often as you want — the restriction is on me: before the gate, I don't open `human_part1/2/3.py` or run `git diff`/`git show` on them. So this part is on you to run and read.
+
+**User:**
+how to run it
+
+**Claude:**
+In your terminal, from this project directory:
+
+```
+uv run python human_part1.py
+```
+
+That runs just Part 1 and prints its output. Swap the filename for `human_part2.py` or `human_part3.py` to run those.
 
 <!-- end-session: e9502caf-182e-4664-bf01-e1c0bdb442ad -->
