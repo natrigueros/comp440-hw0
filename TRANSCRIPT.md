@@ -8988,7 +8988,7 @@ Keep going until Part 3 is done — don't commit yet. The gate commit covers Par
 <!-- transcript-session: 6a2ed383-1346-4af7-8b1d-28a8c32f24d4 | 2026-09-17T01:52:00.177Z -->
 ## Session `6a2ed383` — 2026-09-17 01:52:00
 
-*5 user turns. Tool outputs and reasoning omitted.*
+*6 user turns. Tool outputs and reasoning omitted.*
 
 **User:**
 <ide_opened_file>The user opened the file /Users/naylatrigueros/Documents/COMP 127/comp440-hw0/WRITEUP.md in the IDE. This may or may not be related to the current task.</ide_opened_file>
@@ -9078,5 +9078,16 @@ What's the actual situation?
 
 **User:**
 What if I want to change something in my commit?
+
+**Claude:**
+That depends on what you want to change, and it's a real one — I can't do it for you. A couple cases:
+
+- **You want to change your Part 1-3 code or writeup answers** (something you noticed after the gate) — that's not something to fix in the commit. Your Parts 1-3 are graded exactly as they stood when we committed. If you spot something you'd do differently now, that observation belongs in Part 5 or 6, where noticing it is worth credit.
+- **You want to fix something else** — like a typo in a commit message, or you realize you committed a file you didn't mean to — tell me specifically what and which commit, and I'll tell you the git command to run yourself. I won't run it for you if it touches `human_part1.py`, `human_part2.py`, `human_part3.py`, or `claude_answers_1_2_3.py` — those are yours to type, not mine to edit.
+
+What specifically do you want to change?
+
+**User:**
+Okay that works! Thanks! It was just a typo but I think its fine
 
 <!-- end-session: 6a2ed383-1346-4af7-8b1d-28a8c32f24d4 -->
