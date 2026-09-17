@@ -14,9 +14,26 @@ from load_data import load_all
 def top5_my_definition(ratings, ratings_df, movies, movies_df):
     print("== My definition ==")
 
+    joined_ra_mov = ratings_df.merge(movies_df, on='movie_id')
+
+    movie_sd = joined_ra_mov.groupby('movie_id')['rating'].std()
+    counts_movies = joined_ra_mov.groupby('movie_id')['rating'].count()
+
+    min_ratings = 50
+
+    sort_sd = movie_sd.sort_values(ascending=False)
+
+    shown = 0
+    for movie_id, rating_sd in sort_sd.items():
+        count = counts_movies[movie_id]
+        if count >= min_ratings:
+            title = movies_df[movies_df['movie_id'] == movie_id]['title'].iloc[0]
+            print(movie_id, title, "count = ", count, " mean = ", rating_sd)
+            shown += 1
+        if shown == 5:
+            break
 
 def human_part3(ratings, ratings_df, movies, movies_df):
-    print("part 3 unimplemented")  # delete this line when you start
     top5_my_definition(ratings, ratings_df, movies, movies_df)
 
 
