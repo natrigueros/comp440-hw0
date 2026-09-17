@@ -8988,7 +8988,7 @@ Keep going until Part 3 is done — don't commit yet. The gate commit covers Par
 <!-- transcript-session: 6a2ed383-1346-4af7-8b1d-28a8c32f24d4 | 2026-09-17T01:52:00.177Z -->
 ## Session `6a2ed383` — 2026-09-17 01:52:00
 
-*4 user turns. Tool outputs and reasoning omitted.*
+*5 user turns. Tool outputs and reasoning omitted.*
 
 **User:**
 <ide_opened_file>The user opened the file /Users/naylatrigueros/Documents/COMP 127/comp440-hw0/WRITEUP.md in the IDE. This may or may not be related to the current task.</ide_opened_file>
@@ -9075,5 +9075,8 @@ What are you trying to undo, and why? A few things to flag before we touch git h
 - If you mean something else (like a later Auto-commit TRANSCRIPT.md commit, or you made an unrelated mistake), tell me which commit and I can walk you through options — but I won't run anything destructive (`reset --hard`, `checkout --`, etc.) without you confirming exactly what you want undone.
 
 What's the actual situation?
+
+**User:**
+What if I want to change something in my commit?
 
 <!-- end-session: 6a2ed383-1346-4af7-8b1d-28a8c32f24d4 -->
