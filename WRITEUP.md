@@ -100,7 +100,7 @@ Code: `human_part3.py`.
 **What your definition captures, what it misses, and where "___-ness" lives in this data — the
 genre labels, what the crowd did, or the words in the titles. At most 150 words:**
 
-it captures polarizing-ness based on the users behavior. It uses the indiidual ratings no matter genre or title. It however ignores why opinions might differ. Like different audiences rate things differently. It also treats all ratings as equal in terms of timing, missing trends or popularity over the years. Within this data, polarizing-ness is in what the crowd (users) did (rating movies).
+it captures polarizing-ness based on the users behavior. It uses the indiidual ratings no matter genre or title. It however ignores why opinions might differ. Like different audiences rate things differently. It also treats all ratings as equal in terms of timing, missing trends or popularity over the years. Within this data, polarizing-ness is in what the crowd (users) did (rating movies)
 
 ## Part 4. Claude's answers
 
@@ -109,60 +109,64 @@ or your answers.
 
 **Did its numbers for Part 1 match yours? If not, which, and what did you find?**
 
-XXXX
+It did! It also added percentage comparisons next to each number for 1a which is interesting. The format in its answers are also way cleaner than mine, which I think derives from the fact that I followed a very limited format based on orevious knowledge from for example Core Concepts (COMP 123. ) Looking at Claude's code I doubt I would've been able to recreate that.
 
 ## Part 5. Comparing the best movie
 
 **Claude's rule:**
 
-XXXX
+highest mean rating among movies with a reasonably large number of ratings
 
 **Read what Claude wrote about its rule. Does it anywhere admit the rule was a choice, and that a different rule was possible? Or does it give its answer as simply the answer? Quote the sentence that decides it:**
 
-XXXX
+Claude looked at best movies with 20, 50 and 100 ratings. It explains why it chose the rule, but not that it was explicitly a choice: "A raw average is misleading for movies with only a handful of
+    # ratings (a single 5-star rating gives a "perfect" 5.0 mean with
+    # n=1). So "best" here means:"
 
 **Your Part 2 top 10 and Claude's Part 2 top 10 — not the Part 1(d) lists. Where do they differ, and why?**
 
-XXXX
+For this part, my Claude did not provide a list, just gave me 1 best movie overall. Which does agree with mine, but my for loop did return the top 10 with my rule. I guess somewhere in the code, claude puts a limit to 1 movie just like i put on my loop that as soon as the shown movies reach 10, the for loop should stop.
 
 **Better for what purpose? Name a situation where your rule is the right one and a situation where Claude's is. At most 150 words. You may conclude yours, its, or neither:**
 
-XXXX
+Mine would be a better option if, say, the Main Cinema Theater wanted to show crowd favorites and they used this data to see which movies they could show in a film festival. Claude's could be better if an investor is interested in buying rights or stocks to a certain well-rated movie. It depends on the context, but simply because mine shows a wider range, I would say mine as it coukd be used for multiple purposes.
 
 ## Part 6. Comparing the most ___ movie
 
 **Claude's definition:**
 
-XXXX
+Polarizing
 
 **Is Claude's film in your top 5?**
 
-XXXX
+I chose the same word after searching on Google the most popular terms to describe movies in recent years. I wonder if the response Google gave me uses the same data that Claude used to pick its word. We coded this very differently, and interestingky enough, our lists are very different. The top 1 in Claude's list that is supposed to be similar to mine, actually is different. And my list includes a film that is not listed in Claude's list. 
 
 **What Claude's definition sees that yours does not, and the reverse. At most 150 words:**
 
-XXXX
+Claude's definition makes a distiction between film that are polarizing per se and films that are either highly liked or disliked. I think my list does not have seperate boundaries and I used a similar set up to my part 2 (since it was easiest, oops?) so it showed polarizing movies with 50+ ratings, while Claude's answer had sepoerate thresholds.
 
 ## Working with Claude
 
 **What you asked Claude for during Parts 1–3** (debugging and installing only — say what you
 got stuck on)**:**
 
-XXXX
+I asked it for this: "How do I start the homework?", "What is the name of the dataset?", "What to do if I'm done with Part 1?", "How do I get the numbers for the writeup if I can't run individual parts?", "How to run it", "Do I commit anything yet, or keep going until Part 3?"
+
+I mentioned it in class too, but I clearly had issues rememring the setup in VS code, so it was super helpful with that. After, I also asked if I could go back and fix typos for my writeup after I committed, but I apparentky couldn't so I hope everything's still understandable.
 
 **Something Claude said that you could not verify, and why. Or "none," and how you checked:**
 
-XXXX
+None, I didn't really ask stuff other than how to navigate my VS code or where to find certain things in all the files.
 
 **What you would do differently next time, in 3–5 sentences:**
 
-XXXX
+If I had known, I maybe would have gone with a similar word to polarizing, maybe "dividing", and see if our lists diferred. It would have been interesting to see if different thresholds still rendered the same movies or not. I would have also started a little earlier because I had some issues getting Claude started.
 
 **Where did this assignment slow you down for a reason that was its fault, not yours? Point at
 the step. Or "nowhere." One or two sentences:**
 
-XXXX
+With the readme instructions, I was a little confused as to where to start with the whole process of downloading Claude code and getting it to work; the order there is not what I ended up doing with Shilad's help. 
 
-**Hours spent:** XXXX
+**Hours spent:** 4.5 hours
 
-**Anyone who helped you, or "no one":** XXXX
+**Anyone who helped you, or "no one":** Google search for "What are some popular terms to describe films", and search for " Ways to measure divergence in people who liked a movie and people who didn't". Class resources for STAT 253 (taken with Brianna heggeseth in 2025).
